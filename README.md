@@ -3,7 +3,9 @@
 Project Description:
 An open-source, GDPR-compliant semantic search engine for personal messages across platforms.
 
-Project structure:
+# Project Folder Structure
+
+```plaintext
 MessageSearch/
 ├── backend/
 │   ├── app/
@@ -27,3 +29,5 @@ MessageSearch/
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── .gitignore
+```
+# Instalation Instructions - WIP
