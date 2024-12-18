@@ -1,0 +1,26 @@
+# FastAPI framework
+fastapi==0.95.2
+
+# ASGI server for FastAPI
+uvicorn[standard]==0.22.0
+
+# Database and ORM
+sqlalchemy==2.0.18
+psycopg2-binary==2.9.6  # Use psycopg2-binary for ease of setup
+
+# Semantic Search
+sentence-transformers==2.2.2
+weaviate-client==3.16.0
+
+# Cryptography for encryption
+cryptography==41.0.2
+
+# Pydantic for data validation
+pydantic==2.4.0
+
+# Optional: Logging and monitoring
+python-dotenv==1.0.0
+
+# Optional: Testing
+pytest==7.4.2
+httpx==0.24.1  # For testing FastAPI endpoints
