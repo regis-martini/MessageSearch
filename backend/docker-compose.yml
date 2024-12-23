@@ -1,11 +1,17 @@
 version: '3.4'
 services:
   weaviate:
-    image: semitechnologies/weaviate:latest
+    image: semitechnologies/weaviate:1.27.9
     ports:
       - "8080:8080"
     environment:
-      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
-      PERSISTENCE_DATA_PATH: "./data"
-      DEFAULT_VECTORIZER_MODULE: 'text2vec-transformers'
-      TRANSFORMERS_INFERENCE_API: 'http://localhost:8000'
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: "true"
+      PERSISTENCE_DATA_PATH: "/var/lib/weaviate"
+      DEFAULT_VECTORIZER_MODULE: "text2vec-transformers"
+      TRANSFORMERS_INFERENCE_API: "http://transformers-inference:8000"
+
+  transformers-inference:
+    build:
+      context: ./inference_api
+    ports:
+      - "8000:8000"
